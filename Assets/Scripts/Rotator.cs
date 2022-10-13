@@ -25,13 +25,13 @@ public class Rotator : MonoBehaviour
         rotationKeyZ = Input.GetAxis("Horizontal");
         rotationKeyY = Input.GetAxis("Horizontal_2");
         if(Math.Abs(rotationKeyX)>0.001){
-            Debug.Log("X: " + rotationKeyX);
+            //Debug.Log("X: " + rotationKeyX);
         }
         if(Math.Abs(rotationKeyX)>0.001){
-            Debug.Log("Y: " + rotationKeyX);
+            //Debug.Log("Y: " + rotationKeyX);
         }
         if(Math.Abs(rotationKeyZ)>0.001){
-            Debug.Log("Z: " + rotationKeyZ);
+            //Debug.Log("Z: " + rotationKeyZ);
         }
         transform.Rotate(rotationSpeedX*rotationKeyX,rotationKeyY*rotationSpeedY,-rotationSpeedZ*rotationKeyZ,Space.Self);
         if (Input.GetKeyDown("w"))
