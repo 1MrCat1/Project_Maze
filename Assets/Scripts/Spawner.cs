@@ -12,10 +12,8 @@ public class Spawner : MonoBehaviour
     public Vector3 position;
     public int board_height;
     public int board_width;
-    //public Vector3 offset;
-    //private Vector3 scale_center;
-    //private Vector3 scale_border;
-    //private Vector3 scale_crossing;
+
+    private GameObject[] _board_list;
     private float _offset_x;
     private float _offset_z;
     private GameObject tmp;
