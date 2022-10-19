@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6806345759416888478}
   - component: {fileID: -8915237314236599128}
   m_Layer: 0
-  m_Name: Prefab_border
+  m_Name: Prefab_border_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
