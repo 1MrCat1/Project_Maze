@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Maze{
+public class MazeLogic{
     public int[,] m_cells;
     public int[,] m_walls_h;
     public int[,] m_walls_v;
@@ -14,7 +14,7 @@ public class Maze{
     //private GameObject[] board_lower;
     //private GameObject[] board_maze;
 
-    public Maze(int h,int w,int eh,int ew){
+    public MazeLogic(int h,int w,int eh,int ew){
         this.h = h;
         this.w = w;
         this.entrance_h=eh;
@@ -22,6 +22,31 @@ public class Maze{
         m_cells = new int[h,w];
         m_walls_h = new int[h,w-1];
         m_walls_v = new int[h-1,w];
+    }
+
+    public void ChangeSize(int newH,int newW){
+        bool changed = false;
+        if(newH!=h){
+            changed = true;
+            h=newH;
+        }
+        if(newW!=w){
+            changed=true;
+            w = newW;
+        }
+        if(changed){
+           // Delete(m_cells);
+           // Delete(m_walls_h);
+           // Delete(m_walls_v);
+            m_cells = new int[h,w];
+            m_walls_h = new int[h,w-1];
+            m_walls_v = new int[h-1,w];
+        }
+    }
+    
+    public void ChangeEntrance(int newH,int newW){
+        entrance_h = newH;
+        entrance_w = newW;
     }
 
     public void GenerateMaze(){

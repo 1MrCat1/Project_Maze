@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionDetector : MonoBehaviour
+public class MainGameHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public class CollisionDetector : MonoBehaviour
     void Update()
     {
         
-    }
-    
-    private void OnTriggerEnter(Collider other)
-    {
-       //Debug.Log("Collision detected\n" + other);
     }
 }
